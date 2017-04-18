@@ -1,0 +1,30 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660M (ID=0xfd4)
+    Vendor:   NVIDIA
+    VRAM:     1985 MB
+    Driver:   10.18.13.6472
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.022 seconds
+Platform assembly: C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\bosek\Documents\Unity\Roll a Ball\Build\Roll a Ball_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.609622 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1e80 -> priority: 1 
+  Thread -> id: 10f0 -> priority: 1 
