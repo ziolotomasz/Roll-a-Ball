@@ -6,17 +6,18 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     public float speed;
-    public Text countText;
+    public Text scoreText;
     public Text winText;
 
-    private int count;
+    private int score;
     private Rigidbody rb;
 
+    private int numberOfPickUps = 8;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
+        score = 0;
 
         SetCountText();
         winText.text = "";
@@ -34,10 +35,20 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        //Collecting Pick Ups
         if(other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
-            count += 1;
+            score += 1;
+
+            SetCountText();
+        }
+
+        //Collecting Oposition of Pick Ups
+        if (other.gameObject.CompareTag("Oposition of Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+            score -= 1;
 
             SetCountText();
         }
@@ -45,8 +56,8 @@ public class PlayerController : MonoBehaviour {
 
     void SetCountText()
     {
-        countText.text = "Count: " + count.ToString();
-        if (count >= 8)
+        scoreText.text = "Count: " + score.ToString() + "/" + numberOfPickUps.ToString();
+        if (score >= numberOfPickUps)
             winText.text = "You win!";
     }
 }
