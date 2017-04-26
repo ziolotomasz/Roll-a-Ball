@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     public float speed;
-    public Text scoreText;
-    public Text winText;
+    public Text countText, scoreText, winText;
 
     private int score;
     private Rigidbody rb;
 
     private int numberOfPickUps = 8;
+    private int numberOfPickUpsPicked;
+    private bool gameGoal = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         score = 0;
+        numberOfPickUpsPicked = 0;
 
         SetCountText();
         winText.text = "";
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour {
         {
             other.gameObject.SetActive(false);
             score += 1;
+            numberOfPickUpsPicked += 1;
 
             SetCountText();
         }
@@ -52,12 +55,25 @@ public class PlayerController : MonoBehaviour {
 
             SetCountText();
         }
+
+        //Finishing Game
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            other.gameObject.SetActive(false);
+            gameGoal = true;
+
+            SetCountText();
+        }
+
     }
 
     void SetCountText()
     {
-        scoreText.text = "Count: " + score.ToString() + "/" + numberOfPickUps.ToString();
-        if (score >= numberOfPickUps)
-            winText.text = "You win!";
+        countText.text = numberOfPickUpsPicked.ToString() + "/" + numberOfPickUps.ToString();
+        scoreText.text = "Score: " + score.ToString();
+        if (gameGoal == true && score >= numberOfPickUps / 2)
+            winText.text = "You won!";
+        if (gameGoal == true && score <= numberOfPickUps / 2)
+            winText.text = "You lost!";
     }
 }

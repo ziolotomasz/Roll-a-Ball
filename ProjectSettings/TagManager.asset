@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pick Up
   - Oposition of Pick Up
+  - Goal
   layers:
   - Default
   - TransparentFX
